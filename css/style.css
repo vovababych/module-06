@@ -38,7 +38,7 @@
       border: 0px;
       padding: 0px;
       clip: rect(0 0 0 0);
-      clip-path: inset(100%);
+      clip-path: inset(50% 50% 50% 50%);
       margin: -1px;
   }
   

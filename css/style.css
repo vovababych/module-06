@@ -38,7 +38,7 @@
       border: 0px;
       padding: 0px;
       clip: rect(0 0 0 0);
-      clip-path: inset(50% 50% 50% 50%);
+      clip-path: inset(0 0 0 0);
       margin: -1px;
   }
   
@@ -68,10 +68,6 @@
       display: flex;
   }
   
-  .menu-item {
-      position: relative;
-  }
-  
   .menu-item:not(:last-of-type) {
       margin-right: 55px;
   }
@@ -81,10 +77,12 @@
       font-weight: 400;
       text-transform: uppercase;
       cursor: pointer;
+      position: relative;
       transition: color 200ms linear;
   }
   
-  .menu-item-link:hover {
+  .menu-item-link:hover,
+  .menu-item-link:focus {
       color: #f38181;
   }
   
@@ -97,12 +95,14 @@
       color: #f38181;
       width: 100%;
       opacity: 0;
+      visibility: hidden;
       transition: all 200ms linear;
   }
   
   .menu-item:hover .menu-item-link::after,
   .menu-item:focus .menu-item-link::after {
       opacity: 1;
+      visibility: visible;
       margin-top: 10px;
   }
   /* services */
@@ -337,7 +337,7 @@
       border: 1px solid #e7e7e7;
   }
   
-  .footer-form [placeholder*=Email] {
+  .footer-form-input-email::placeholder {
       font-family: "Roboto";
       font-size: 15px;
       line-height: 24px;

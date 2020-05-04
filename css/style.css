@@ -199,7 +199,7 @@
   }
   
   .section__desription {
-      width: 980px;
+      max-width: 980px;
       margin: 0 auto;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
@@ -332,6 +332,7 @@
       width: 230px;
       height: 40px;
       border: 1px solid #e7e7e7;
+      padding-left: 12px;
   }
   
   .footer-form-input-email::placeholder {
@@ -340,7 +341,6 @@
       line-height: 24px;
       color: #cccccc;
       font-style: italic;
-      padding-left: 12px;
   }
   
   .subscribe {
